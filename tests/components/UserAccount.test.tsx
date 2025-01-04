@@ -21,7 +21,7 @@ describe("UserAccount", () => {
   });
 
   it("does not render Edit button when user isnt admin", () => {
-    const user: User = { id: 1, name: "shad" };
+    const user: User = { id: 1, name: "shad", isAdmin: false };
 
     const button = screen.queryByRole("button");
     expect(button).not.toBeInTheDocument();
@@ -29,10 +29,6 @@ describe("UserAccount", () => {
 });
 
 //Alternative way to write the test
-
-// import { render, screen } from "@testing-library/react";
-// import UserAccount from "../../src/components/UserAccount";
-
 // describe("UserAccount Component", () => {
 //   it("renders user profile with name", () => {
 //     const user: User = { name: "John Doe", isAdmin: false };
