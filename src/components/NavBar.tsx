@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
 import AuthStatus from "./AuthStatus";
 import LanguageSelector from "./LanguageSelector";
+import DarkModeToggle from "./DarkMode";
 
 const NavBar = () => {
   const { getItemCount } = useCart();
@@ -41,6 +42,7 @@ const NavBar = () => {
         </ul>
       </Flex>
       <Flex gap="2" align="center">
+        <DarkModeToggle />
         <Flex align="center" gap="1">
           <AiOutlineShoppingCart />
           <Badge role="status">{getItemCount()}</Badge>

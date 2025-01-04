@@ -54,3 +54,46 @@ a:hover {
     color: #747bff;
   }
 }
+/* Light mode styles */
+body {
+  @apply bg-white text-gray-900 transition-colors duration-300;
+}
+
+/* Dark mode styles */
+body.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Headings in dark mode */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  @apply text-white;
+}
+
+/* Paragraphs and spans in dark mode */
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark a {
+  @apply text-gray-300; /* Slightly lighter than white for better contrast */
+}
+
+/* Links in dark mode (hover effect) */
+body.dark a:hover {
+  @apply text-blue-400;
+}
+
+/* Forms and placeholders in dark mode */
+body.dark input,
+body.dark textarea {
+  @apply bg-gray-700 text-gray-100 border-gray-600;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  @apply text-gray-400;
+}
