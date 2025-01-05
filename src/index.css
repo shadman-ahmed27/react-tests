@@ -60,12 +60,15 @@ a:hover {
 }
 /* Light mode styles */
 body {
-  @apply bg-white text-gray-900 transition-colors duration-300;
+  background-color: white;
+  color: #1a202c; /* Equivalent to Tailwind's gray-900 */
+  transition: color 0.3s, background-color 0.3s;
 }
 
 /* Dark mode styles */
 body.dark {
-  @apply bg-gray-900 text-gray-100;
+  background-color: #1a202c; /* Equivalent to Tailwind's gray-900 */
+  color: #f7fafc; /* Equivalent to Tailwind's gray-100 */
 }
 
 /* Headings in dark mode */
@@ -75,7 +78,7 @@ body.dark h3,
 body.dark h4,
 body.dark h5,
 body.dark h6 {
-  @apply text-white;
+  color: white;
 }
 
 /* Paragraphs and spans in dark mode */
@@ -83,21 +86,28 @@ body.dark p,
 body.dark span,
 body.dark li,
 body.dark a {
-  @apply text-gray-300; /* Slightly lighter than white for better contrast */
+  color: #d1d5db; /* Slightly lighter than white for better contrast */
 }
 
 /* Links in dark mode (hover effect) */
 body.dark a:hover {
-  @apply text-blue-400;
+  color: #60a5fa; /* Equivalent to Tailwind's blue-400 */
 }
 
 /* Forms and placeholders in dark mode */
 body.dark input,
 body.dark textarea {
-  @apply bg-gray-700 text-gray-100 border-gray-600;
+  background-color: #374151; /* Equivalent to Tailwind's gray-700 */
+  color: #f7fafc; /* Equivalent to Tailwind's gray-100 */
+  border-color: #4b5563; /* Equivalent to Tailwind's gray-600 */
 }
 
 body.dark input::placeholder,
 body.dark textarea::placeholder {
-  @apply text-gray-400;
+  color: #9ca3af; /* Equivalent to Tailwind's gray-400 */
+}
+
+.expandable-text {
+  background-color: #1a202c; /* Equivalent to Tailwind's gray-900 */
+  color: #f7fafc; /* Equivalent to Tailwind's gray-100 */
 }
